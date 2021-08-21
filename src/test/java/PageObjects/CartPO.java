@@ -17,18 +17,29 @@ public class CartPO {
 		this.driver = driver;
 	}
 
+	/*
+	 * Validates the option to access the cart and continue with the checkout form.
+	 */
 	public void reviewCart() {
 		 driver.findElement(By.id("shopping_cart_container")).click();
 		 driver.findElement(By.id("checkout")).click();
 		 
 		}
 	
+	/*
+	 * Verifies if the title of the page are equals than the expected.
+	 */
 	public void overviewCheckout() {
 		driver.findElement(By.id("continue")).click();
 		String titlePage = driver.findElement(lblHeaderOverview).getText();
 		assertEquals("The expected message are not the same", "CHECKOUT: OVERVIEW", titlePage);
 	}
 	
+	/*
+	 * Validates the last message when to finish the order process
+	 * And return to the product page.
+	 * and Logs out of the web.
+	 */
 	public void verifyOrder() {
 		 driver.findElement(By.name("finish")).click();
 		 String thanksMessage = driver.findElement(lblThanksMessage).getText();

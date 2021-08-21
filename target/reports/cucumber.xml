@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="3.546">
-    <testcase classname="Feature to select some products into Sauce page" name="Select and purchase the lowest and highest priced products" time="3.397">
-        <system-out><![CDATA[Given I log in to Swag Lab..................................................passed
-And user enters like standard_user..........................................passed
-When I select the filter....................................................passed
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="3.742">
+    <testcase classname="Feature to try enter with the available users in the Sauce Demo web" name="Select and purchase the lowest and highest priced products" time="3.598">
+        <system-out><![CDATA[Given I navigate to the Sauce Demo application..............................passed
+And I enter the web such as standard_user user..............................passed
+When I select the filter Price Low to High..................................passed
 And I choose the products...................................................passed
 And I go to my cart to buy my products......................................passed
 Then the new purchase should be successful..................................passed

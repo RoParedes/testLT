@@ -17,7 +17,7 @@ public class ProductsSteps {
 	CartPO cartPO;
 
 	@SuppressWarnings("deprecation")
-	@Given("I log in to Swag Lab")
+	@Given("I navigate to the Sauce Demo application")
 	public void i_log_in_to_swag_lab() {
 		System.out.println("Inside Step - user is on login page");
 		String projectPath = System.getProperty("user.dir");
@@ -31,7 +31,7 @@ public class ProductsSteps {
 
 	}
 
-	@And("user enters like standard_user")
+	@And("I enter the web such as standard_user user")
 	public void user_enters_like_and_password() throws InterruptedException {
 		System.out.println("Inside Step - user enters username and password");
 		driver.findElement(By.name("user-name")).sendKeys("standard_user");
@@ -42,7 +42,7 @@ public class ProductsSteps {
 
 	}
 
-	@When("I select the filter")
+	@When("I select the filter Price Low to High")
 	public void i_select_the_filter() {
 		System.out.println("Inside Step - user selects the filter");
 		productsMethodsPO = new ProductsMethodsPO(driver);

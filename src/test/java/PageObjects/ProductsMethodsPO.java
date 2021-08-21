@@ -16,16 +16,25 @@ public class ProductsMethodsPO {
 		this.driver = driver;
 	}
 
+	/*
+	 * Verifies the title of the Page for Products.
+	 */
 	public void titleProductPage() {
 		String titlePage = driver.findElement(lblHeaderProductPage).getText();
 		assertEquals("The expected message are not the same", "PRODUCTS", titlePage);
 	}
 	
+	/*
+	 * Selects the filter option for Low to High priced of the products. 
+	 */
 	public void selectDropdownFilter() {
 		Select selectList = new Select(driver.findElement(cmb_Selector));
 		selectList.selectByVisibleText("Price (low to high)");
 	}
 
+	/*
+	 * Chooses the each product according to the prices. 
+	 */
 	public void chooseProducts() {
 		driver.findElement(By.name("add-to-cart-sauce-labs-onesie")).click();
 		driver.findElement(By.name("add-to-cart-sauce-labs-fleece-jacket")).click();
